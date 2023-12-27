@@ -11,7 +11,7 @@ This project implements APIs for the main screen, order history screen, and wish
 <img src="https://github.com/Kim-Yukyung/Baemin_Database/assets/154517645/05599ac4-caeb-4bda-b879-5c1c2ccbbd7e" height = "400"/> <br>
 - Users can save their address through the address tab.
 - The chosen delivery address is prominently displayed in the top left corner.
-- Touching a category in the center immediately displays the list of stores in that category.
+- Touching a category in the center displays the list of stores in that category.
 
 ## Order History Screen
 <img src="https://github.com/Kim-Yukyung/Baemin_Database/assets/154517645/e3256b67-a39c-4f6d-bd56-5ff23088ef85" height = "400"/> <br>
