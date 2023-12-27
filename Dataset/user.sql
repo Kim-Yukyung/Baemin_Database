@@ -1,0 +1,28 @@
+ALTER TABLE User MODIFY COLUMN user_name VARCHAR(20);
+
+INSERT INTO User VALUES
+(1, 'Aileen Riley', 'a', 0, 0.0),
+(2, 'Quin Tillman', 'b', 1, 2.5),
+(3, 'Anastasia Collier', 'c', 1, 3.5),
+(4, 'Beck Charles', 'd', 0, 0.0),
+(5, 'Stella Chen', 'e', 1, 4.0),
+(6, 'Gabriel Hester', 'f', 0, 0.0),
+(7, 'Aquila Zamora', 'g', 0, 0.0),
+(8, 'Tate Griffith', 'h', 1, 3.0),
+(9, 'Kay Taylor', 'i', 1, 4.5),
+(10, 'Olympia Herrera', 'j', 2, 2.0),
+(11, 'Emerson Mcleod', 'k', 2, 3.0),
+(12, 'Rana Hardin', 'l', 2, 3.5),
+(13, 'Clark Lang', 'm', 2, 4.4),
+(14, 'Dane Macdonald', 'n', 1, 2.5),
+(15, 'Barrett Lee', 'o', 1, 3.5),
+(16, 'George Morrow', 'p', 1, 1.5),
+(17, 'Felix Donaldson', 'q', 0, 0.0),
+(18, 'Pearl Brown', 'r', 1, 2.5),
+(19, 'Daniel Cannon', 's', 1, 4.0),
+(20, 'Allegra Summers', 't', 1, 2.0),
+(21, 'Cullen Crawford', 'u', 2, 4.0),
+(22, 'Keiko Gillespie', 'v', 2, 2.0),
+(23, 'Nina Odom', 'w', 0, 0.0),
+(24, 'Noah Beasley', 'x', 1, 2.5),
+(25, 'Jason Stuart', 'y', 0, 0.0);
