@@ -9,7 +9,7 @@ In this repository, I have created APIs that correspond to various screens withi
 ![Baemin (1)](https://github.com/Kim-Yukyung/Baemin_Database/assets/154517645/d781abdf-2e95-4901-985c-f2d0ce667215)
 
 ### Main Screen
-
+![005](https://github.com/Kim-Yukyung/Baemin_Database/assets/154517645/2a1fed76-7278-4b42-8335-d1c27311b5c8)
 
 ### Order History Screen
 
