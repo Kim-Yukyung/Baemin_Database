@@ -4,7 +4,7 @@ This repository contains a set of APIs corresponding to various screens within t
 ## Project Overview
 This project implements APIs for the main screen, order history screen, and wishlist screen of the Baemin application.
 
-## Table
+## ERD (Entity-Relationship Diagram)
 ![Baemin (1)](https://github.com/Kim-Yukyung/Baemin_Database/assets/154517645/d781abdf-2e95-4901-985c-f2d0ce667215)
 
 ## Main Screen
