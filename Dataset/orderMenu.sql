@@ -1,5 +1,5 @@
 INSERT INTO OrderMenu VALUES
-	  (1, 34, 2),
+    (1, 34, 2),
     (1, 36, 1),
     
     (2, 84, 3),
