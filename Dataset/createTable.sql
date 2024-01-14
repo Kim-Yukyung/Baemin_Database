@@ -105,139 +105,61 @@ CREATE TABLE `StoreCategory` (
 	`category_id`	INT	NOT NULL
 );
 
-ALTER TABLE `User` ADD CONSTRAINT `PK_USER` PRIMARY KEY (
-	`user_id`
-);
+ALTER TABLE `User` ADD CONSTRAINT `PK_USER` PRIMARY KEY (`user_id`);
 
-ALTER TABLE `Address` ADD CONSTRAINT `PK_ADDRESS` PRIMARY KEY (
-	`address_id`
-);
+ALTER TABLE `Address` ADD CONSTRAINT `PK_ADDRESS` PRIMARY KEY (`address_id`);
 
-ALTER TABLE `Order` ADD CONSTRAINT `PK_ORDER` PRIMARY KEY (
-	`order_id`
-);
+ALTER TABLE `Order` ADD CONSTRAINT `PK_ORDER` PRIMARY KEY (`order_id`);
 
-ALTER TABLE `Menu` ADD CONSTRAINT `PK_MENU` PRIMARY KEY (
-	`menu_id`
-);
+ALTER TABLE `Menu` ADD CONSTRAINT `PK_MENU` PRIMARY KEY (`menu_id`);
 
-ALTER TABLE `OrderMenu` ADD CONSTRAINT `PK_ORDERMENU` PRIMARY KEY (
-	`order_id`,
-	`menu_id`
-);
+ALTER TABLE `OrderMenu` ADD CONSTRAINT `PK_ORDERMENU` PRIMARY KEY (`order_id`, `menu_id`);
 
-ALTER TABLE `Store` ADD CONSTRAINT `PK_STORE` PRIMARY KEY (
-	`store_id`
-);
+ALTER TABLE `Store` ADD CONSTRAINT `PK_STORE` PRIMARY KEY (`store_id`);
 
-ALTER TABLE `Category` ADD CONSTRAINT `PK_CATEGORY` PRIMARY KEY (
-	`category_id`
-);
+ALTER TABLE `Category` ADD CONSTRAINT `PK_CATEGORY` PRIMARY KEY (`category_id`);
 
-ALTER TABLE `Like` ADD CONSTRAINT `PK_LIKE` PRIMARY KEY (
-	`user_id`,
-	`store_id`
-);
+ALTER TABLE `Like` ADD CONSTRAINT `PK_LIKE` PRIMARY KEY (`user_id`, `store_id`);
 
-ALTER TABLE `DeliveryTip` ADD CONSTRAINT `PK_DELIVERYTIP` PRIMARY KEY (
-	`delivery_tip`,
-	`store_id`
-);
+ALTER TABLE `DeliveryTip` ADD CONSTRAINT `PK_DELIVERYTIP` PRIMARY KEY (`delivery_tip`, `store_id`);
 
-ALTER TABLE `Coupon` ADD CONSTRAINT `PK_COUPON` PRIMARY KEY (
-	`coupon_id`,
-	`user_id`,
-	`store_id`
-);
+ALTER TABLE `Coupon` ADD CONSTRAINT `PK_COUPON` PRIMARY KEY (`coupon_id`, `user_id`, `store_id`);
 
-ALTER TABLE `Review` ADD CONSTRAINT `PK_REVIEW` PRIMARY KEY (
-	`user_id`,
-	`store_id`
-);
+ALTER TABLE `Review` ADD CONSTRAINT `PK_REVIEW` PRIMARY KEY (`user_id`, `store_id`);
 
-ALTER TABLE `Delivery` ADD CONSTRAINT `PK_DELIVERY` PRIMARY KEY (
-	`delivery_id`
-);
+ALTER TABLE `Delivery` ADD CONSTRAINT `PK_DELIVERY` PRIMARY KEY (`delivery_id`);
 
-ALTER TABLE `StoreCategory` ADD CONSTRAINT `PK_STORECATEGORY` PRIMARY KEY (
-	`store_id`,
-	`category_id`
-);
+ALTER TABLE `StoreCategory` ADD CONSTRAINT `PK_STORECATEGORY` PRIMARY KEY (`store_id`, `category_id`);
 
-ALTER TABLE `OrderMenu` ADD CONSTRAINT `FK_Order_TO_OrderMenu_1` FOREIGN KEY (
-	`order_id`
-)
-REFERENCES `Order` (
-	`order_id`
-);
+ALTER TABLE `OrderMenu` ADD CONSTRAINT `FK_Order_TO_OrderMenu_1` FOREIGN KEY (`order_id`)
+	REFERENCES `Order` (`order_id`);
 
-ALTER TABLE `OrderMenu` ADD CONSTRAINT `FK_Menu_TO_OrderMenu_1` FOREIGN KEY (
-	`menu_id`
-)
-REFERENCES `Menu` (
-	`menu_id`
-);
+ALTER TABLE `OrderMenu` ADD CONSTRAINT `FK_Menu_TO_OrderMenu_1` FOREIGN KEY (`menu_id`)
+	REFERENCES `Menu` (`menu_id`);
 
-ALTER TABLE `Like` ADD CONSTRAINT `FK_User_TO_Like_1` FOREIGN KEY (
-	`user_id`
-)
-REFERENCES `User` (
-	`user_id`
-);
+ALTER TABLE `Like` ADD CONSTRAINT `FK_User_TO_Like_1` FOREIGN KEY (`user_id`)
+	REFERENCES `User` (`user_id`);
 
-ALTER TABLE `Like` ADD CONSTRAINT `FK_Store_TO_Like_1` FOREIGN KEY (
-	`store_id`
-)
-REFERENCES `Store` (
-	`store_id`
-);
+ALTER TABLE `Like` ADD CONSTRAINT `FK_Store_TO_Like_1` FOREIGN KEY (`store_id`)
+	REFERENCES `Store` (`store_id`);
 
-ALTER TABLE `DeliveryTip` ADD CONSTRAINT `FK_Store_TO_DeliveryTip_1` FOREIGN KEY (
-	`store_id`
-)
-REFERENCES `Store` (
-	`store_id`
-);
+ALTER TABLE `DeliveryTip` ADD CONSTRAINT `FK_Store_TO_DeliveryTip_1` FOREIGN KEY (`store_id`)
+	REFERENCES `Store` (`store_id`);
 
-ALTER TABLE `Coupon` ADD CONSTRAINT `FK_User_TO_Coupon_1` FOREIGN KEY (
-	`user_id`
-)
-REFERENCES `User` (
-	`user_id`
-);
+ALTER TABLE `Coupon` ADD CONSTRAINT `FK_User_TO_Coupon_1` FOREIGN KEY (`user_id`)
+	REFERENCES `User` (`user_id`);
 
-ALTER TABLE `Coupon` ADD CONSTRAINT `FK_Store_TO_Coupon_1` FOREIGN KEY (
-	`store_id`
-)
-REFERENCES `Store` (
-	`store_id`
-);
+ALTER TABLE `Coupon` ADD CONSTRAINT `FK_Store_TO_Coupon_1` FOREIGN KEY (`store_id`)
+	REFERENCES `Store` (`store_id`);
 
-ALTER TABLE `Review` ADD CONSTRAINT `FK_User_TO_Review_1` FOREIGN KEY (
-	`user_id`
-)
-REFERENCES `User` (
-	`user_id`
-);
+ALTER TABLE `Review` ADD CONSTRAINT `FK_User_TO_Review_1` FOREIGN KEY (`user_id`)
+	REFERENCES `User` (`user_id`);
 
-ALTER TABLE `Review` ADD CONSTRAINT `FK_Store_TO_Review_1` FOREIGN KEY (
-	`store_id`
-)
-REFERENCES `Store` (
-	`store_id`
-);
+ALTER TABLE `Review` ADD CONSTRAINT `FK_Store_TO_Review_1` FOREIGN KEY (`store_id`)
+	REFERENCES `Store` (`store_id`);
 
-ALTER TABLE `StoreCategory` ADD CONSTRAINT `FK_Store_TO_StoreCategory_1` FOREIGN KEY (
-	`store_id`
-)
-REFERENCES `Store` (
-	`store_id`
-);
+ALTER TABLE `StoreCategory` ADD CONSTRAINT `FK_Store_TO_StoreCategory_1` FOREIGN KEY (`store_id`)
+	REFERENCES `Store` (`store_id`);
 
-ALTER TABLE `StoreCategory` ADD CONSTRAINT `FK_Category_TO_StoreCategory_1` FOREIGN KEY (
-	`category_id`
-)
-REFERENCES `Category` (
-	`category_id`
-);
-
+ALTER TABLE `StoreCategory` ADD CONSTRAINT `FK_Category_TO_StoreCategory_1` FOREIGN KEY (`category_id`)
+	REFERENCES `Category` (`category_id`);
