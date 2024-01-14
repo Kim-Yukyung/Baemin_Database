@@ -1,4 +1,4 @@
-INSERT INTO category VALUES 
+INSERT INTO Category VALUES 
 (1, 'B마트', 'http://categoryImage1.com/150x100.png'),
 (2, '편의점, 마트', 'http://categoryImage2.com/150x100.png'),
 (3, '알뜰배달', 'http://categoryImage3.com/150x100.png'),
