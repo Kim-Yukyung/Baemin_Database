@@ -64,5 +64,3 @@ INSERT INTO StoreCategory VALUES
 (48, 18),
 (49, 19),
 (50, 15);
-
-select * from StoreCategory order by store_id;
