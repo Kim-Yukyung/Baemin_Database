@@ -1,4 +1,4 @@
-INSERT INTO Delivery  VALUES 
+INSERT INTO Delivery VALUES 
 -- Assuming the starting time is the reception time plus 30 minutes and the arrival time is assumed by adding the estimated time, based on the 'order' table
 (1, '2023-11-01 10:45:00', '2023-11-01 11:00:00', 12, 2, 1, 15, 1500),
 (2, '2023-11-02 14:55:00', '2023-11-02 15:20:00', 28, 3, 2, 25, 2300),
